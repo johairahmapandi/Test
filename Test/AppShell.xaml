@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Test.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Test"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarBackgroundColor="Pink">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+  
+    <TabBar>
+        <ShellContent
+            ContentTemplate="{DataTemplate local:Dashboard}"
+            Icon="dashboard.png"
+            Route="Dashboard" />
+        <ShellContent
+            ContentTemplate="{DataTemplate local:Orders}"
+            Icon="orders.png"
+            Route="Orders" />
+        <ShellContent
+            ContentTemplate="{DataTemplate local:Profile}"
+            Icon="profile.png"
+            Route="Profile" />
+    </TabBar>
+</Shell>

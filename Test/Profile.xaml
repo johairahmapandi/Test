@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test.Profile"
+             Title="Profile"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <!-- Top Background with Curve -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                </Grid.RowDefinitions>
+
+                <BoxView BackgroundColor="LightPink"
+                         HeightRequest="250"
+                         CornerRadius="0,0,50,50"
+                         HorizontalOptions="Fill"
+                         VerticalOptions="Start"/>
+
+                <!-- Profile Image -->
+                <StackLayout HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Grid.Row="0"
+                             Margin="0,10,0,0">
+                    <Frame WidthRequest="100"
+                           HeightRequest="100"
+                           CornerRadius="50"
+                           HasShadow="False"
+                           BorderColor="White"
+                           BackgroundColor="Transparent"
+                           HorizontalOptions="Center">
+                        <Image Source="jennie_pic.jpg" 
+                               Aspect="AspectFill"
+                               HeightRequest="100"
+                               WidthRequest="100"/>
+                    </Frame>
+
+                    <!-- Camera Icon -->
+                    <Image Source="camera.png"
+                           HeightRequest="0"
+                           WidthRequest="24"
+                           Margin="20,0,0,0"
+                           HorizontalOptions="EndAndExpand"/>
+
+                    <!-- Name and Profile Link -->
+                    <Label Text="Johairah Mapandi"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                           Margin="0,5,0,0"/>
+                    <Label Text="View full profile"
+                           FontSize="12"
+                           TextColor="Gray"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </Grid>
+
+            <!-- Menu Buttons -->
+            <VerticalStackLayout Padding="25" Spacing="5">
+                <Frame BackgroundColor="LightGray"
+                       CornerRadius="10"
+                       Padding="15">
+                    <HorizontalStackLayout>
+                        <Image Source="profile.png"
+                               WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Account Information"
+                               TextColor="White"
+                               FontSize="16"
+                               Margin="10,0,0,0"/>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="LightGray"
+                       CornerRadius="10"
+                       Padding="15">
+                    <HorizontalStackLayout>
+                        <Image Source="locked.png"
+                               WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Password"
+                               TextColor="White"
+                               FontSize="16"
+                               Margin="10,0,0,0"/>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="LightGray"
+                       CornerRadius="10"
+                       Padding="15">
+                    <HorizontalStackLayout>
+                        <Image Source="setting.png"
+                               WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Settings"
+                               TextColor="White"
+                               FontSize="16"
+                               Margin="10,0,0,0"/>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="LightGray"
+                       CornerRadius="10"
+                       Padding="15">
+                    <HorizontalStackLayout>
+                        <Image Source="phone.png"
+                               WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Help Support"
+                               TextColor="White"
+                               FontSize="16"
+                               Margin="10,0,0,0"/>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Logout Button -->
+                <Frame BackgroundColor="Transparent"
+                       BorderColor="Black"
+                       CornerRadius="10"
+                       Padding="15">
+                    <HorizontalStackLayout>
+                        <Image Source="logout.png"
+                               WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Log out"
+                               TextColor="LightPink"
+                               FontSize="16"
+                               Margin="10,0,0,0"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
