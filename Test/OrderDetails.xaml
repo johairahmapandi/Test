@@ -1,0 +1,41 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Test.ViewModels"
+             x:Class="Test.OrderDetails">
+
+    <ContentPage.BindingContext>
+        <vm:OrderDetailsViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto,*">
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="10" Spacing="20">
+
+                <!-- Product Image -->
+                <Image Source="{Binding Image}" HeightRequest="250" Aspect="AspectFill" HorizontalOptions="Center"/>
+
+                <!-- Product Details -->
+                <Frame Padding="20" BackgroundColor="White" CornerRadius="20"
+                       Margin="0,0,0,0" HasShadow="True">
+                    <StackLayout>
+                        <Label Text="{Binding Name}" FontSize="22" FontAttributes="Bold"/>
+                        <Label Text="{Binding Description}" FontSize="14" TextColor="Gray"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Price & Add to Cart Button -->
+                <Grid ColumnDefinitions="*,Auto" Padding="10,0,10,10">
+                    <Label Text="{Binding Price, StringFormat='₱{0:0.00}'}"
+                           FontSize="20" FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+
+                    <Button Text="🛒 Add to shopping bag"
+                            BackgroundColor="Black" TextColor="White"
+                            CornerRadius="10" Padding="10"
+                            Clicked="OnAddToCartClicked"
+                            Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

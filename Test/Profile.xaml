@@ -67,7 +67,7 @@
                     <HorizontalStackLayout>
                         <Image Source="profile.png"
                                WidthRequest="24" HeightRequest="24"/>
-                        <Label Text="Account Information"
+                        <Label Text="Edit Profile"
                                TextColor="White"
                                FontSize="16"
                                Margin="10,0,0,0"/>
@@ -80,7 +80,7 @@
                     <HorizontalStackLayout>
                         <Image Source="locked.png"
                                WidthRequest="24" HeightRequest="24"/>
-                        <Label Text="Password"
+                        <Label Text="Shipping Address"
                                TextColor="White"
                                FontSize="16"
                                Margin="10,0,0,0"/>
@@ -93,7 +93,7 @@
                     <HorizontalStackLayout>
                         <Image Source="setting.png"
                                WidthRequest="24" HeightRequest="24"/>
-                        <Label Text="Settings"
+                        <Label Text="Order History"
                                TextColor="White"
                                FontSize="16"
                                Margin="10,0,0,0"/>
@@ -106,7 +106,7 @@
                     <HorizontalStackLayout>
                         <Image Source="phone.png"
                                WidthRequest="24" HeightRequest="24"/>
-                        <Label Text="Help Support"
+                        <Label Text="Track Order"
                                TextColor="White"
                                FontSize="16"
                                Margin="10,0,0,0"/>

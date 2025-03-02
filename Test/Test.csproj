@@ -77,6 +77,9 @@
 	  <MauiXaml Update="Maps.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="OrderDetails.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Orders.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

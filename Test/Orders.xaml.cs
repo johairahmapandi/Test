@@ -13,7 +13,8 @@ public partial class Orders : ContentPage
         OrderItems = new ObservableCollection<OrderItem>
         {
             new OrderItem { Name = "Heart Earrings", Price = 300.00, Quantity = 1, Image = "jewelry1.png" },
-            new OrderItem { Name = "Ruby Black Sandals", Price = 900.00, Quantity = 1, Image = "shoe2.png" }
+            new OrderItem { Name = "Ruby Black Sandals", Price = 900.00, Quantity = 1, Image = "shoe2.png" },
+            new OrderItem { Name = "Pink Leather Watch", Price = 1200.00, Quantity = 1, Image = "jewelry3.png" }
         };
         BindingContext = this;
     }
@@ -27,5 +28,13 @@ public partial class Orders : ContentPage
     {
         await Navigation.PopAsync();
     }
+}
+public class OrderItem
+{
+    public string Name { get; set; }
+    public double Price { get; set; }
+    public int Quantity { get; set; }
+    public string Image { get; set; }
+    public double TotalPrice => Price * Quantity;
 }
 

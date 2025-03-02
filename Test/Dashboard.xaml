@@ -135,6 +135,7 @@
                                                          TextColor="Pink"
                                                          VerticalOptions="Start"/>      
                                                 </StackLayout>
+                                                
                                                 <StackLayout.GestureRecognizers>
                                                     
                                                 </StackLayout.GestureRecognizers>
